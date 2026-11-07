@@ -243,8 +243,8 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .toast.out { opacity: 0; }
 
 /* ------------------------------------------------------------------ recipient */
-.recipient { min-height: 100dvh; display: grid; place-items: center; padding: 20px; }
-.recipient .phone { height: min(820px, calc(100dvh - 40px)); min-height: 0; }
+.recipient { min-height: 100dvh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.recipient .phone { --h: min(820px, calc(100dvh - 40px)); height: var(--h); width: calc(var(--h) * 9 / 19); max-width: 100%; min-height: 0; aspect-ratio: auto; }
 @media (max-width: 600px) {
   .recipient { padding: 0; }
   .recipient .phone { width: 100vw; height: 100dvh; aspect-ratio: auto; padding: 0; border-radius: 0; box-shadow: none; }
